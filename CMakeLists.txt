@@ -195,6 +195,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 # Add subproject builds for Rcpp and RInside
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Rcpp)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/RInside)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Rpack)
 
 # Optionally dump config information before build.
 # Enable using: cmake -DSHOWCONF=TRUE ..
