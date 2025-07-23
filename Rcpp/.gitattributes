@@ -1,5 +1,0 @@
-ChangeLog merge=union
-inst/NEWS.Rd merge=union
-
-# gitattribute override for linguist
-*.h linguist-language=C++

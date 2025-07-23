@@ -1,0 +1,6 @@
+[submodule "RInside"]
+	path = RInside
+	url = https://github.com/eddelbuettel/rinside.git
+[submodule "Rcpp"]
+	path = Rcpp
+	url = https://github.com/RcppCore/Rcpp.git
