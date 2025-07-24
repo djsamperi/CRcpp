@@ -1,6 +1,8 @@
 # Build files
 build/*
 public/*
+*.o
+*.so
 
 # Emacs temp files
 *~
