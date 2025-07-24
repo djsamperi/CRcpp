@@ -84,13 +84,11 @@ execute_process(
             ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-# Patch Rcpp/RInside source for Microsoft Visual C++ (MSVC)
-if(MSVC)
+# Patch Rcpp/RInside source
 execute_process(
- COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/bin/msvcpatch.sh 
+ COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/bin/applypatch.sh 
             ${CMAKE_CURRENT_SOURCE_DIR}
 )
-endif()
 
 # The platform/architecture can be set here for Microsoft compilers. 
 # Only the x64 architecture is supported under MSVC.

@@ -265,6 +265,20 @@ void RInside::initialize(const int argc, const char* const argv[], const bool lo
     R_SetParams(&Rst);
 
     if (true || loadRcpp) {             // we always need Rcpp, so load it anyway
+
+        // Use R_LIBS to locate Rcpp.
+        // Required under MacOS (otherwise standard location is used)
+        const char* rlibs = std::getenv("R_LIBS");
+        if(rlibs != nullptr) {
+            SEXP paths;
+            PROTECT(paths = Rf_allocVector(STRSXP, 1));
+            SET_STRING_ELT(paths, 0, Rf_mkChar(rlibs));
+            Rf_eval(Rf_lang2(Rf_install(".libPaths"), paths), R_GlobalEnv);
+            UNPROTECT(1);
+        } else {
+            Rprintf("R_LIBS not set");
+        }
+
         // Rf_install is used best by first assigning like this so that symbols get into
         // the symbol table where they cannot be garbage collected; doing it on the fly
         // does expose a minuscule risk of garbage collection -- with thanks to Doug Bates

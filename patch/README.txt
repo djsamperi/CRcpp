@@ -1,8 +1,9 @@
 The files in this directory are patched for use with the Microsoft C++
 compiler (cl.exe). Tested with Visual Studio Community Edition 2022.
-Warnings from the compiler have been suppressed because there are many.
-Most edits are minor and can be found by searching for the MSVC
-flag _MSC_VER. More significant hacks are required for RInside.cpp.
+Warnings from the compiler have been suppressed because there are
+many. MSVC-specific edits can be found by searning for _MSC_VER.
+There is also an edit/patch that forces use of the version of
+Rcpp pointed to by R_LIBS (required under MacOS).
 
 To link to R (compiled using GCC toolchain) an import library R.lib
 must be generated from the DLL R.dll. After R.lib is created, the
