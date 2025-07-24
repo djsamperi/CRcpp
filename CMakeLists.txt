@@ -92,12 +92,6 @@ execute_process(
 )
 endif()
 
-# Patch include/Rcpp/Language.h
-execute_process(
- COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/bin/languagepatch.sh 
-            ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 # The platform/architecture can be set here for Microsoft compilers. 
 # Only the x64 architecture is supported under MSVC.
 if(MSVC)

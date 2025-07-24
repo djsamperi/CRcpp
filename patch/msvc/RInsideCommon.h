@@ -1,8 +1,7 @@
-// -*- mode: C++; c-indent-level: 4; c-basic-offset: 4; indent-tabs-mode: nil; -*-
-//
+
 // RInsideCommon.h: R/C++ interface class library -- Easier R embedding into C++
 //
-// Copyright (C) 2010 - 2011 Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2010 - 2022  Dirk Eddelbuettel and Romain Francois
 //
 // This file is part of RInside.
 //
