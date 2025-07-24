@@ -31,7 +31,7 @@ like the following:
 
 > cd "c:\Program Files\R\R-4.5.1\bin\x64"
 > c:\MinGW\bin\pexports R.dll > Rdll.def
-> link /def:Rdll.def /out:R.lib /machine:x64
+> lib /def:Rdll.def /out:R.lib /machine:x64
 
 
 
