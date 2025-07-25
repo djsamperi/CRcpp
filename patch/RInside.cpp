@@ -265,10 +265,15 @@ void RInside::initialize(const int argc, const char* const argv[], const bool lo
     R_SetParams(&Rst);
 
     if (true || loadRcpp) {             // we always need Rcpp, so load it anyway
-
         // Use R_LIBS to locate Rcpp.
-        // Required under MacOS (otherwise standard location is used)
+#ifdef __APPLE__
+        // Xcode does not pickup system env defs, and CMake does not
+        // support inserting defs into an Xcode scheme (yet?).
+        // For the time being, we hard code R_LIBS for Xcode.
+        const char* rlibs = "~/R/test";
+#else
         const char* rlibs = std::getenv("R_LIBS");
+#endif
         if(rlibs != nullptr) {
             SEXP paths;
             PROTECT(paths = Rf_allocVector(STRSXP, 1));
@@ -278,6 +283,7 @@ void RInside::initialize(const int argc, const char* const argv[], const bool lo
         } else {
             Rprintf("R_LIBS not set");
         }
+
 
         // Rf_install is used best by first assigning like this so that symbols get into
         // the symbol table where they cannot be garbage collected; doing it on the fly
