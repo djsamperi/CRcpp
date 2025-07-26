@@ -173,6 +173,11 @@ link_directories(
 #add_executable(CRcpp WIN32 ${CMAKE_CURRENT_SOURCE_DIR}/src/repl.cpp)
 add_executable(CRcpp ${CMAKE_CURRENT_SOURCE_DIR}/src/repl.cpp)
 
+if(APPLE)
+set_property(TARGET CRcpp PROPERTY XCODE_GENERATE_SCHEME TRUE)
+set_property(TARGET CRcpp PROPERTY XCODE_SCHEME_ENVIRONMENT "R_LIBS=$ENV{R_LIBS};DISPLAY=$ENV{DISPLAY}")
+endif()
+
 # Link CRcpp to R and RInside libs (Rcpp is header-only)
 target_link_libraries(CRcpp R RInside)
 

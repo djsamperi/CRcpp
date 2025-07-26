@@ -266,14 +266,7 @@ void RInside::initialize(const int argc, const char* const argv[], const bool lo
 
     if (true || loadRcpp) {             // we always need Rcpp, so load it anyway
         // Use R_LIBS to locate Rcpp.
-#ifdef __APPLE__
-        // Xcode does not pickup system env defs, and CMake does not
-        // support inserting defs into an Xcode scheme (yet?).
-        // For the time being, we hard code R_LIBS for Xcode.
-        const char* rlibs = "~/R/test";
-#else
         const char* rlibs = std::getenv("R_LIBS");
-#endif
         if(rlibs != nullptr) {
             SEXP paths;
             PROTECT(paths = Rf_allocVector(STRSXP, 1));
