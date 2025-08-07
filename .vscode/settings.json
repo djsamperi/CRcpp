@@ -3,7 +3,7 @@
     "cmake.configureSettings": {
 	    "SHOW_CONF": "FALSE",
     	"STATIC_LIBS": "FALSE",
-        "R_LIBS_WIN": "C:/R/test",
-        "R_LIBS": "~/R/test"
+        "R_LIBS_WINYYY": "C:/w/R/test",
+        "R_LIBSZZZ": "~/R/test"
     }
 }

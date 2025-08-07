@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.10)
 
 # Build Rcpp library and then copy it over the one that was
 # installed by R into the user library specified by R_LIBS.

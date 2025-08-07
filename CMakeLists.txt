@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.10)
 
 # Uses CMake to build Rcpp and RInside libraries suitable for use
 # with GCC (CRAN default for Windows), Visual Studio IDE,
