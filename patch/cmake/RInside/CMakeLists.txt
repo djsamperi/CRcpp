@@ -32,3 +32,10 @@ add_custom_command(TARGET RInside POST_BUILD
     ${OUTPUT_LIB}
   COMMAND echo "Copying $<TARGET_FILE:RInside> to ${OUTPUT_LIB}"
 )
+
+# Sign DLL for development.
+if(APPLE)
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+  COMMAND codesign -s - --force --timestamp=none ${OUTPUT_LIB}
+)
+endif()

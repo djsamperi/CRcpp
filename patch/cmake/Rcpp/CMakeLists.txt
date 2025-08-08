@@ -36,4 +36,11 @@ else()
     COMMAND echo "Linking $<TARGET_FILE:Rcpp> to ${OUTPUT_LIB}")
 endif()
 
+# Sign DLL for development.
+if(APPLE)
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+  COMMAND codesign -s - --force --timestamp=none ${OUTPUT_LIB}
+)
+endif()
+
 
