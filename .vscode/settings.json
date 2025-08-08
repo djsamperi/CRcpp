@@ -1,9 +1,7 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "cmake.configureSettings": {
-	    "SHOW_CONF": "FALSE",
-    	"STATIC_LIBS": "FALSE",
-        "R_LIBS_WINYYY": "C:/w/R/test",
-        "R_LIBSZZZ": "~/R/test"
+	"SHOW_CONF": "FALSE",
+    	"STATIC_LIBS": "FALSE"
     }
 }
