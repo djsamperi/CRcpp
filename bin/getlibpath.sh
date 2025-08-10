@@ -1,3 +1,4 @@
+#!/bin/sh
 # Get full path of the install location for a specified package,
 # for example, sh getlibpath.sh Rcpp
 

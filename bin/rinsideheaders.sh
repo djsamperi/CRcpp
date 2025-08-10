@@ -1,3 +1,4 @@
+#!/bin/sh
 # RInside requires some environment configuration and automatic
 # loading of selected R objects. This is done with the help of
 # system-dependent header files that are generated here and

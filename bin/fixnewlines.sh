@@ -1,3 +1,4 @@
+#!/bin/sh
 # fixnewlines.sh
 #
 # Files saved under Windows often have lines terminated

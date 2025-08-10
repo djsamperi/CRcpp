@@ -1,3 +1,4 @@
+#!/bin/sh
 # Add CMakeLists.txt files for Rcpp and RInside, as well
 # as Rcpp/src/CRcppBuildRcpp.cpp and RInside/src/CRcppBuildRInside.cpp.
 # Path to CRcpp directory should be specified.

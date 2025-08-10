@@ -1,3 +1,4 @@
+#!/bin/sh
 # Patch Rcpp and RInside source files for use with Microsoft compiler.
 # Also includes a general patch for RInside.cpp. Microsoft changes
 # are indicated by _MSC_VER define.

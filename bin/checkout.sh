@@ -1,3 +1,4 @@
+#!/bin/sh
 # Check out msvc branch for submodules Rcpp and RInside.
 # The default behavior is to leave HEAD detached, because
 # the submodule points to a commit, not to a reference.

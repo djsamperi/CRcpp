@@ -1,3 +1,4 @@
+#!/bin/sh
 # Removes helper files that are generated in the Rcpp and RIside
 # directory trees.
 # Path to CRcpp directory should be specified.

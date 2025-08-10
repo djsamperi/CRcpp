@@ -1,3 +1,4 @@
+#!/bin/sh
 # Checks that R and ninja are present on a UNIX system.
 envproblem=0
 

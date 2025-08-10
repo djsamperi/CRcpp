@@ -1,3 +1,4 @@
+#!/bin/sh
 # Use R to install Rcpp/RInside/Mypack into R_LIBS
 # Target directory in R_LIBS must exist.
 # Remove object files and dll's from source dir after install.
